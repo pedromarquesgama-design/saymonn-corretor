@@ -56,10 +56,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
           <div className="flex flex-col">
             <span className="text-base md:text-lg font-bold tracking-wider text-white uppercase leading-tight font-display">
-              SAYMONN SPH
+              Life Soluções
             </span>
             <span className="text-[10px] md:text-[11px] font-semibold tracking-[0.2em] text-[#D4B07A] uppercase leading-none mt-0.5 font-display">
-              IMÓVEIS DE ALTO PADRÃO
+              Gestão Imobiliária
             </span>
           </div>
         </a>

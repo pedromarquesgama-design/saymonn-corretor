@@ -10,7 +10,7 @@ Este documento define todos os tokens e regras de estilo do sistema de design ci
   - Pesos: `600` (Semi-Bold), `700` (Bold)
   - Uso obrigatório:
     - Todos os títulos (`h1`, `h2`, `h3`, `h4`)
-    - Marca na Navbar (`SAYMONN SPH` e subtítulo `IMÓVEIS DE ALTO PADRÃO`)
+    - Marca na Navbar (`Life Soluções` e subtítulo `Gestão Imobiliária`)
     - Títulos de seções e cartões
     - Grandes números e preços (`R$ ...`)
   - Responsividade: Títulos principais com `clamp()` para nunca transbordar em telas pequenas (a partir de 360px).
