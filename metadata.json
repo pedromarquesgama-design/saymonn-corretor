@@ -1,0 +1,6 @@
+{
+  "name": "Saymonn SPH | Imóveis de Alto Padrão & Incorporadora Matilda",
+  "description": "Consultoria imobiliária de alto padrão em Coroa Vermelha e Porto Seguro - BA. Condomínio Bougainville Residence e lançamentos exclusivos Matilda.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

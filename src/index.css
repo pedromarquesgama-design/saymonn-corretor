@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel', Georgia, serif;
+    --font-body: 'Poppins', system-ui, -apple-system, sans-serif;
+    
+    /* DESIGN TOKENS */
+    --color-gold-light: #F1DDB0;
+    --color-gold-mid: #D4B07A;
+    --color-gold-deep: #A88445;
+    
+    --color-charcoal: #121212;
+    --color-surface: #1B1B1D;
+    --color-raised: #2A2A2C;
+    
+    --color-border-subtle: rgba(255, 255, 255, 0.15);
+    --color-border-gold: rgba(212, 176, 122, 0.5);
+  }
+  
+  body {
+    font-family: var(--font-body);
+    background-color: #121212;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+  }
+}
+
+/* UTILITÁRIOS TIPOGRÁFICOS */
+.font-display, .font-cinzel {
+  font-family: var(--font-display);
+}
+
+.font-body, .font-poppins {
+  font-family: var(--font-body);
+}
+
+/* TEXTO DOURADO METÁLICO (CINEMÁTICO - TÍTULOS PADRÃO) */
+.text-metallic-gold {
+  background: linear-gradient(180deg, #F6E6BE 0%, #D9B97F 45%, #A88445 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.6));
+}
+
+/* -------------------------------------------------------------------------- */
+/* HEADLINE PRINCIPAL EMBOSSED 3D CHAMPAGNE GOLD (HERO SECTION)               */
+/* -------------------------------------------------------------------------- */
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.09;
+  filter: 
+    drop-shadow(-0.5px -0.5px 0.5px rgba(255, 245, 220, 0.6))
+    drop-shadow(0.75px 1px 0px rgba(121, 87, 45, 0.82))
+    drop-shadow(1.2px 1.6px 0px rgba(85, 55, 25, 0.45))
+    drop-shadow(0px 2.5px 4px rgba(0, 0, 0, 0.28));
+}
+
+/* Linha 1: ENCONTRE (Champagne Marfim Quente / Ligeiramente mais claro) */
+.hero-title-line-1 {
+  display: block;
+  color: #E8CC91;
+  background: linear-gradient(
+    180deg,
+    #FFF8E7 0%,
+    #FFF3D4 24%,
+    #E8CC91 60%,
+    #D7AE64 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Linhas 2, 3 e 4: SEU IMÓVEL / PERFEITO / NA BAHIA (Transição para Ouro Champanhe Quente) */
+.hero-title-line-rest {
+  display: block;
+  color: #D7AE64;
+  background: linear-gradient(
+    180deg,
+    #FFF3D4 0%,
+    #E8CC91 30%,
+    #D7AE64 65%,
+    #BD914A 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Aliases de compatibilidade */
+.text-metallic-gold-hero, .text-metallic-gold-3d {
+  background: linear-gradient(180deg, #FFF3D4 0%, #E8CC91 30%, #D7AE64 65%, #BD914A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* DIVISÓRIA DOURADA CHAMPAGNE (160px x 3.5px) */
+.gold-divider {
+  width: 160px;
+  max-width: 48%;
+  height: 3.5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #BD914A 0%, #FFF3D4 35%, #D7AE64 70%, #79572D 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+/* -------------------------------------------------------------------------- */
+/* SAYMONN MACHADO OVERLAY (HERO SECTION - SOBRE O TERNO ESCURO)              */
+/* -------------------------------------------------------------------------- */
+
+.saymonn-overlay-line {
+  width: 58px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #BD914A 0%, #FFF3D4 50%, #79572D 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  margin-bottom: 5px;
+}
+
+.saymonn-overlay-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: linear-gradient(180deg, #FFF8E7 0%, #E8CC91 40%, #D7AE64 75%, #BD914A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 1.5px 2px rgba(0, 0, 0, 0.85));
+  line-height: 1.15;
+}
+
+.saymonn-overlay-subtitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: #E8CC91;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+  line-height: 1.2;
+}
+
+/* 1. BOTÃO PRIMÁRIO: FULL PILL, OURO ESCOVADO, POPPINS 500 UPPERCASE */
+.btn-gold, .btn-primary {
+  background: linear-gradient(90deg, #8E6E3A 0%, #E6CD9A 35%, #F1DDB0 50%, #D4B07A 70%, #9B7A42 100%);
+  color: #2A2418;
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(212, 176, 122, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-gold:hover, .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(212, 176, 122, 0.55);
+  filter: brightness(1.06);
+}
+
+.btn-gold:active, .btn-primary:active {
+  transform: translateY(0);
+}
+
+/* 2. BOTÃO SECUNDÁRIO: TRANSPARENT PILL, BORDA DOURADA 1PX, TEXTO DOURADO */
+.btn-secondary, .btn-dark-outline {
+  background: transparent;
+  border: 1px solid rgba(212, 176, 122, 0.5);
+  color: #D4B07A;
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-secondary:hover, .btn-dark-outline:hover {
+  background: rgba(212, 176, 122, 0.12);
+  border-color: #D4B07A;
+  color: #F1DDB0;
+  transform: translateY(-1px);
+}
+
+/* 3. BOTÕES DE ÍCONE: QUADRADO ARREDONDADO 18PX */
+.btn-icon {
+  border-radius: 18px;
+  background: rgba(27, 27, 29, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+  background: rgba(42, 42, 44, 0.9);
+  border-color: rgba(212, 176, 122, 0.5);
+  color: #D4B07A;
+}
+
+/* 4. NAVBAR GRADIENTE METAL ESCOVADO ESCURO */
+.navbar-brushed {
+  background: linear-gradient(180deg, #2A2A2C 0%, #151516 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 176, 122, 0.5);
+}
+
+/* 5. CARDS & PAINÉIS GLASSMORPHISM (28PX RADIUS) */
+.glass-card, .card-nestora {
+  background: rgba(20, 20, 20, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 28px;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), inset 0 -1px 0 0 rgba(212, 176, 122, 0.35);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.glass-card:hover, .card-nestora:hover {
+  border-color: rgba(212, 176, 122, 0.45);
+  box-shadow: 0 20px 42px -8px rgba(0, 0, 0, 0.8), 0 0 24px -5px rgba(212, 176, 122, 0.2), inset 0 -1px 0 0 rgba(212, 176, 122, 0.6);
+  transform: translateY(-4px);
+}
+
+/* 7. INPUTS E CAMPOS DE FORMULÁRIO (16PX RADIUS) */
+.input-dark {
+  background: #1B1B1D;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.input-dark:focus {
+  border-color: #D4B07A;
+  box-shadow: 0 0 15px rgba(212, 176, 122, 0.3);
+  outline: none;
+}
+
+.input-dark::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* CUSTOM SCROLLBAR LUXO */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2C;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 176, 122, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4B07A;
+}
